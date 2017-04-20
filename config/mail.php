@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.163.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,8 +54,10 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
-
+'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'miliyos@163.com'),
+        'name' => env('MAIL_FROM_NAME', 'eiengwch'),
+    ],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
@@ -67,7 +69,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------
